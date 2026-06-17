@@ -1,1 +1,1 @@
-#Welcome to my online programming portfolio 
+#Welcome to my Python portfolio 
