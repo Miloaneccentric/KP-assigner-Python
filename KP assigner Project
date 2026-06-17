@@ -1,0 +1,38 @@
+import random 
+
+group_list = ["Briley", "Bryant", "Banks", "Pimentel", "Mills",
+              "Hadden", "Salminen", "Bowie", "Perry", "Alvarez", "Kennison", "Mentel", "Jackson"]
+
+local_list = ["6/1/2026", "6/2/2026", "6/3/2026", "6/4/2026", "6/5/2026", "6/6/2026",
+               "6/7/2026", "6/8/2026", "6/9/2026", "6/10/2026", "6/11/2026", "6/12/2026", "6/13/2026", "6/14/2026 " ] 
+
+#According to gooogle, because the function is positioned outside a loop, freezing its value. This basically causes the same names to be persistantly collected
+def greeting(name): 
+    print(f" {name}, has been selected! ")
+
+intro = (input("Hey, before we begin, what is your name? ")) 
+print(f"Hey {intro.upper()}, I like your name! ")
+
+while True: 
+    random_date = random.choice(local_list)
+    intro_two= (input(f"OK {intro}, to run the random name generator, type RUN and to exit, type X "))
+       
+    if intro_two.lower() == "x":
+        break 
+
+    elif intro_two.lower() == "run":  
+       random_name = random.choice(group_list)
+       (greeting(random_name + " for " + random_date))
+       enter = input(("type E to restart ")) 
+       if enter.lower() == "e":
+           continue
+
+    else:
+        print("Please try again and enter the correct characters") 
+
+#KP is essentially the military's washing dishes duty. This script assigns random individuals from that duty. 
+
+
+#The goal is to make it to where if one person is choosen more than once, they are temporarily taken off list  
+#Goal is to also import dates/time 
+#Dictionary vs concatination. 
